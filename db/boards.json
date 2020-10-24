@@ -1,0 +1,8 @@
+{
+    "boards": {
+    "boardId": "1",
+    "firebaseKey": "board1",
+    "name": "Breakfast Recipes",
+    "image": "https://www.lavenderandmacarons.com/wp-content/uploads/2020/02/Vegan-Granola-Recipe.jpg"
+    }
+}
