@@ -19,4 +19,26 @@ const getAllBoards = () => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
-export default { getAllBoards };
+const getUserBoards = (userUid) => new Promise((resolve, reject) => {
+  axios.get(`${baseUrl}/boards.json?orderBy="userUid"&equalTo="${userUid}"`)
+    .then((response) => {
+      const usersBoards = response.data;
+      const boards = [];
+      if (usersBoards) {
+        Object.keys(usersBoards).forEach((boardId) => {
+          boards.push(usersBoards[boardId]);
+        });
+      }
+      resolve(boards);
+    }).catch((error) => reject(error));
+});
+
+const getSingleBoard = (boardFirebaseKey) => new Promise((resolve, reject) => {
+  console.warn('word');
+  axios.get(`${baseUrl}/boards/${boardFirebaseKey}.json`).then((response) => {
+    const singleBoard = response.data;
+    resolve(singleBoard);
+  }).catch((error) => reject(error));
+});
+
+export default { getAllBoards, getSingleBoard, getUserBoards };

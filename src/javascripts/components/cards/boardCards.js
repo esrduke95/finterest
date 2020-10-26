@@ -1,5 +1,5 @@
 const boardBuilder = (boardObject) => {
-  const domString = `<div class="card m-2" style="width: 18rem;" id="${boardObject.firebaseKey}">
+  const domString = `<div class="card m-2 board-cards" style="width: 18rem;" id="${boardObject.firebaseKey}">
                       <div class="card-body">
                         <h5 class="card-title">${boardObject.name}</h5>
                         <div class="card-image">
