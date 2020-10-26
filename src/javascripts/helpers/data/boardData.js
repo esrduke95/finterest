@@ -34,7 +34,6 @@ const getUserBoards = (userUid) => new Promise((resolve, reject) => {
 });
 
 const getSingleBoard = (boardFirebaseKey) => new Promise((resolve, reject) => {
-  console.warn('word');
   axios.get(`${baseUrl}/boards/${boardFirebaseKey}.json`).then((response) => {
     const singleBoard = response.data;
     resolve(singleBoard);

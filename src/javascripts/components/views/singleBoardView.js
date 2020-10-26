@@ -1,11 +1,16 @@
-import boardData from '../../helpers/data/boardData';
+import card from '../cards/pinCards';
+import pinData from '../../helpers/data/pinData';
 
-const singleBoardView = (boardFirebaseKey) => {
-  console.warn(boardFirebaseKey);
-  $('#app').html('the board goes here');
-  boardData.getSingleBoard(boardFirebaseKey).then((response) => {
-    console.warn(response);
+const pinsView = () => {
+  pinData.getPins().then((response) => {
+    if (response.length) {
+      response.forEach((item) => {
+        $('#app').append(card.pinBuilder(item));
+      });
+    } else {
+      $('#app').append('<h2>NO PINS</h2>');
+    }
   });
 };
 
-export default { singleBoardView };
+export default { pinsView };
