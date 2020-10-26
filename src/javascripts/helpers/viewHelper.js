@@ -23,7 +23,7 @@ const viewListener = (view) => {
   });
   $('body').on('click', '.view-board', (e) => {
     console.warn(e.currentTarget.id);
-    // viewHelper('view-board-link', e.currentTarget.id);
+    viewHelper(`${boardObject.firebaseKey}`, e.currentTarget.id);
   });
 };
 
