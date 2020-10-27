@@ -12,3 +12,12 @@ body {
   justify-content: space-between;
   text-align: inherit;
 }
+img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+#app {
+  display: flex;
+  flex-flow: row wrap;
+}

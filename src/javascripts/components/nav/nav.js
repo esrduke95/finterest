@@ -11,7 +11,6 @@ const logoutEvent = () => {
 };
 
 const navbar = (currentUser) => {
-  console.warn('works');
   $('#nav').html(`<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <a class="navbar-brand" href="#" id="site-title">finterest</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,7 +19,7 @@ const navbar = (currentUser) => {
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" id="home-link" href="#">Home <span class="sr-only"></span></a>
+          <a class="nav-link" id="home-link" href="#">home<span class="sr-only"></span></a>
         </li>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -33,7 +32,7 @@ const navbar = (currentUser) => {
         </div>
       </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">add pin +</a>
+          <a class="nav-link" id="add-pin-link" href="#">add pin +</a>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
