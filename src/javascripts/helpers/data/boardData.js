@@ -22,6 +22,7 @@ const getAllBoards = () => new Promise((resolve, reject) => {
 const getUserBoards = (userUid) => new Promise((resolve, reject) => {
   axios.get(`${baseUrl}/boards.json?orderBy="userUid"&equalTo="${userUid}"`)
     .then((response) => {
+      console.warn(response);
       const usersBoards = response.data;
       const boards = [];
       if (usersBoards) {
