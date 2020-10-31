@@ -7,8 +7,8 @@ const boardBuilder = (boardObject) => {
                         </div>
                       </div>
                       <div class="card-body">
-                        <a href="#" id="${boardObject.firebaseKey} view-board-btn" class="btn btn-info view-board">View Board</a>
-                        <a href="#" id="${boardObject.firebaseKey} delete-board-btn" class="btn btn-danger delete-board">Delete Board</a>
+                        <a href="#" id="${boardObject.firebaseKey}" class="btn btn-info view-board">View Board</a>
+                        <a href="#" id="${boardObject.firebaseKey}" class="btn btn-danger delete-board">Delete Board</a>
                       </div>
                     </div>`;
   return domString;

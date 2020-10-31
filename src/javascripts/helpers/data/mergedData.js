@@ -19,10 +19,10 @@ const getDataForPins = () => new Promise((resolve, reject) => {
   }).catch((error) => reject(error));
 });
 
-const getSingleBoardView = (userUid) => new Promise((resolve, reject) => {
-  boardData.getUserBoards(userUid)
+const getSingleBoardView = (boardId) => new Promise((resolve, reject) => {
+  boardData.getSingleBoard(boardId)
     .then((boardResponse) => {
-      pinData.getSinglePin(boardResponse.boardfirebaseKey)
+      pinData.getBoardPins(boardResponse.firebaseKey)
         .then((pinResponse) => {
           const finalObject = { pins: pinResponse };
           resolve(finalObject);
