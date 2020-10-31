@@ -1,14 +1,13 @@
 import boardsView from '../components/views/allBoardsView';
 import singleBoardView from '../components/views/singleBoardView';
-import boardObject from '../components/cards/boardCards';
 
-const viewHelper = (id) => {
+const viewHelper = (id, key) => {
   $('#app').html('');
   switch (id) {
     case 'home-link':
       return boardsView.boardsView();
     case 'view-board-btn':
-      return singleBoardView.singleBoardView(boardObject.firebaseKey);
+      return singleBoardView.singleBoardView(key);
     default:
       return console.warn('nothing clicked');
   }
