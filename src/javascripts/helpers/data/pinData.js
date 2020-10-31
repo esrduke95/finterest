@@ -3,20 +3,29 @@ import apiKeys from '../../../../apiKeys.json';
 
 const baseUrl = apiKeys.firebaseKeys.databaseURL;
 
-const getPins = () => new Promise((resolve, reject) => {
+const getBoardPins = (boardUid) => new Promise((resolve, reject) => {
   axios
-    .get(`${baseUrl}/pins.json`)
+    .get(`${baseUrl}/pins.json?orderBy="boardUid"&equalTo="${boardUid}"`)
     .then((response) => {
-      const thePins = response.data;
-      const pinsArray = [];
-      if (thePins) {
-        Object.keys(thePins).forEach((pinId) => {
-          pinsArray.push(thePins[pinId]);
+      console.warn(response);
+      const boardPins = response.data;
+      const pins = [];
+
+      if (boardPins) {
+        Object.keys(boardPins).forEach((pinId) => {
+          pins.push(boardPins[pinId]);
         });
       }
-      resolve(pinsArray);
+      resolve(pins);
     })
     .catch((error) => reject(error));
 });
 
-export default { getPins };
+const getSinglePin = (boardFirebaseKey) => new Promise((resolve, reject) => {
+  axios.get(`${baseUrl}/pins/${boardFirebaseKey}.json`).then((response) => {
+    const thisPin = response.data;
+    resolve(thisPin);
+  }).catch((error) => reject(error));
+});
+
+export default { getBoardPins, getSinglePin };
