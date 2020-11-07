@@ -9,7 +9,7 @@ const viewHelper = (id, key) => {
     case 'view-board-btn':
       return singleBoardView.singleBoardView(key);
     default:
-      return console.warn('nothing clicked');
+      return console.error('nothing clicked');
   }
 };
 
@@ -19,7 +19,12 @@ const viewListener = (view) => {
     e.stopImmediatePropagation();
     viewHelper(e.currentTarget.id);
   });
+  $('body').on('click', '#home-link', (e) => {
+    e.stopImmediatePropagation();
+    viewHelper(e.currentTarget.id);
+  });
   $('body').on('click', '.view-board', (e) => {
+    e.stopImmediatePropagation();
     const boardFirebaseKey = e.currentTarget.id;
     viewHelper('view-board-btn', boardFirebaseKey);
   });

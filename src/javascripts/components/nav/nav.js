@@ -26,7 +26,7 @@ const navbar = (currentUser) => {
           my boards
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">board 1</a>
+          <a class="dropdown-item" id="board1" href="#">board 1</a>
           <a class="dropdown-item" href="#">board 2</a>
           <a class="dropdown-item" href="#">board 3</a>
         </div>
