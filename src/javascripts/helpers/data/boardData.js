@@ -62,6 +62,3 @@ export default {
   getUserBoards,
   deleteBoard
 };
-
-export default { getAllBoards, getSingleBoard, getUserBoards };
-

@@ -1,3 +1,4 @@
+/* eslint-disable import/no-named-as-default-member */
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import card from '../cards/boardCards';
