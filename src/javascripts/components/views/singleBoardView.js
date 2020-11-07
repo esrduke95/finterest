@@ -1,3 +1,4 @@
+/* eslint-disable import/no-named-as-default-member */
 import mergedData from '../../helpers/data/mergedData';
 import card from '../cards/pinCards';
 

@@ -1,3 +1,4 @@
+/* eslint-disable import/no-named-as-default-member */
 import pinData from './pinData';
 import boardData from './boardData';
 
