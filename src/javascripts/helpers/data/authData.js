@@ -13,8 +13,8 @@ const checkLoginStatus = () => {
       navbar.navbar(currentUser.name);
     } else {
       navbar.navbar('guest');
-      viewHelper.viewListener('home-link');
       auth.loginButton();
+      $('#app').html('');
     }
   });
 };

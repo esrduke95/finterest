@@ -36,7 +36,7 @@ const checkIfUserExistsInFirebase = (user) => {
       }
       window.sessionStorage.setItem('ua', true);
     })
-    .catch((error) => console.error(error));
+    .catch((error) => console.warn(error));
 };
 
 const setCurrentUser = (userObj) => {

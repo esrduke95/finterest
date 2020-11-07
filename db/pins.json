@@ -1,0 +1,9 @@
+{
+    "pins": {
+    "pinId": "1",
+    "firebaseKey": "pin1",
+    "name": "vegan granola",
+    "image": "https://www.lavenderandmacarons.com/wp-content/uploads/2020/02/Vegan-Granola-Recipe.jpg",
+    "description": "A lovely vegan granola recipe for the perfect Sunday brunch or weekday breakfast."
+    }
+}
